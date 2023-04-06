@@ -1,0 +1,102 @@
+@font-face {
+    font-family: MarioBros;
+    src: url(/font/SuperMario256.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, skyblue 60%, white);
+    border-bottom: 15px solid rgb(0, 145, 0);
+}
+
+.nuvens {
+    position: absolute;
+    width: 250px;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0;
+    animation: pipe-animation 1.1s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    bottom: 0px;
+    width: 160px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.contador {
+    position: absolute;
+    right: 5px;
+    font-size: 1.5em;
+    font-family: MarioBros;
+    color: rgb(220, 187, 0);
+}
+
+.coin {
+    position: relative;
+    width: 40px;
+    top: 10px;
+}
+
+.num {
+    display: inline;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    25% {
+        bottom: 150px;
+    }
+
+    30% {
+        bottom: 160px;
+    }
+
+    40% {
+        bottom: 179px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 179px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
