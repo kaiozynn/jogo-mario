@@ -22,7 +22,9 @@
 
 .nuvens {
     position: absolute;
-    width: 250px;
+    right: 0;
+    width: 40vw;
+    animation: nuvem 2.5s infinite linear;
 }
 
 .pipe {
@@ -98,5 +100,14 @@
 
     100% {
         bottom: 0px;
+    }
+}
+
+@keyframes nuvem {
+    from {
+        right: -40vw;
+    } 
+    to {
+        right: 100%;
     }
 }
